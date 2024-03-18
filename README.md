@@ -5,7 +5,7 @@ The goal of this ETL tool written in Python is to pull data from the SpaceX Crew
 
 
 ## Assumptions
-Assumptions for the challenge as outlined in the provided challenge description include:
+
 - Utilization of a Python script without reliance on any designated data pipeline or orchestration tools such as Airflow or Dagster
 - Implementation of a dockerized Python script
 - Incorporation of schema migration and evolution
@@ -111,6 +111,7 @@ In order to set up production-grade pipelines to handle hundreds or thousands of
 
 - Data Pipelines:
   - Dockerizing is a viable option.
+  - Current solution lacks proper orchestration capabilities. We can use cron-jobs but it is not proper solution.
   - Orchestration can be efficiently managed through specific tools like Airflow/Dagster.
   - Airflow provides a systematic approach for writing workflows/pipelines programmatically, aiding in proper abstraction, monitoring, and validation of workflows.
 

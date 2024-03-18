@@ -43,6 +43,6 @@ class Transformer:
         try:
             transformed = CrewModel(**input_item)
         except ValidationError as ex:
-            print(f'Failed validation for {input_item}: {ex.errors()[0]}')
+            LOGGER.error(f'Failed validation for {input_item}: {ex.errors()[0]}')
 
         return transformed
